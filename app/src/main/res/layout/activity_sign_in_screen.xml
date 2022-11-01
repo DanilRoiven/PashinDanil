@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".SignInScreen">
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="78dp"
+        android:backgroundTint="@color/bg"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="startNewActivity"
+        android:text="Регистрация"
+        android:textAllCaps="false"
+        android:textColor="@color/orange"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/border"
+        app:strokeWidth="1dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_extended_mini" />
+
+    <EditText
+        android:id="@+id/emailFieldSignIn"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="370dp"
+        android:alpha="0.5"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:hint="E-Mail"
+        android:inputType="textEmailAddress"
+        android:padding="13dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="138dp"
+        android:backgroundTint="#EF3A01"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="Login"
+        android:text="Войти"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/passwordFieldSignIn"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0.5"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:padding="13dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailFieldSignIn" />
+
+    <TextView
+        android:id="@+id/logLock"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="30dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/attemptsCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="4dp"
+        android:alpha="0.5"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:text="Попыток: "
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordFieldSignIn" />
+
+    <TextView
+        android:id="@+id/attemptsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginTop="4dp"
+        android:alpha="0.5"
+        android:padding="13dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/attemptsCounter"
+        app:layout_constraintTop_toBottomOf="@+id/passwordFieldSignIn" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startActiv"
+        android:text="Button"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
